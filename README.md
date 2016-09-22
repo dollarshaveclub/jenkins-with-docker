@@ -28,11 +28,3 @@ $ docker run --name jenkins \
 -v /opt/tls/key.pem:/var/lib/jenkins/key \
 --privileged --net=host quay.io/dollarshaveclub/jenkins-with-docker:master
 ```
-
-
-docker run -ti --rm \
--e DOCKER_HOST=${DOCKER_HOST} \
--e DOCKER_API_VERSION=${DOCKER_API_VERSION} \
--v ~/.dsc-secrets/certs/star.secure.shave.io/STAR_secure_shave_io.crt:/var/lib/jenkins/cert \
--v ~/.dsc-secrets/certs/star.secure.shave.io/star.secure.shave.io.key:/var/lib/jenkins/key \
---privileged --net=host quay.io/dollarshaveclub/jenkins-with-docker:master
